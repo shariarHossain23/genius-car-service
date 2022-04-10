@@ -6,7 +6,7 @@ const Expert = ({ expert }) => {
   const { name, img } = expert;
   return (
     <Col sm={12} md={6} lg={4} className="gx-5 mt-5">
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem" }}className="w-100">
         <Card.Img variant="top" src={img} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
