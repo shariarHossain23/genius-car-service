@@ -19,7 +19,8 @@ const experts = [
 
 const Experts = () => {
   return (
-    <Container className="mx-auto">
+    <div id="expert">
+      <Container className="mx-auto">
         <h2 className="text-center text-primary mt-5">Our Experts</h2>
       <Row >
         {experts.map((expert) => (
@@ -27,6 +28,7 @@ const Experts = () => {
         ))}
       </Row>
     </Container>
+    </div>
   );
 };
 
