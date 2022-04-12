@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
 
 const Expert = ({ expert }) => {
-  console.log(expert);
   const { name, img } = expert;
   return (
     <Col sm={12} md={6} lg={4} className="gx-5 mt-5">
