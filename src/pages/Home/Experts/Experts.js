@@ -6,6 +6,7 @@ import img3 from "../../../images/experts/expert-3.jpg";
 import img4 from "../../../images/experts/expert-4.jpg";
 import img5 from "../../../images/experts/expert-5.jpg";
 import img6 from "../../../images/experts/expert-6.png";
+import PageTitle from "../../shared/PageTitle/PageTitle";
 import Expert from "../Expert/Expert";
 
 const experts = [
@@ -20,6 +21,7 @@ const experts = [
 const Experts = () => {
   return (
     <div id="expert">
+      <PageTitle title={"experts"}></PageTitle>
       <Container className="mx-auto">
         <h2 className="text-center text-primary mt-5">Our Experts</h2>
       <Row >

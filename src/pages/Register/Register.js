@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import PageTitle from '../shared/PageTitle/PageTitle';
 import Sociallogin from '../shared/SocialLogin/Sociallogin';
 import './Regiter.css';
 
@@ -35,6 +36,7 @@ const Register = () => {
     const [agree,setAgree] = useState(false)
     return (
         <div className='register-form'>
+            <PageTitle title={"Register"}></PageTitle>
            <h2 className='text-primary'>Please register</h2> 
            <form onSubmit={formSubmit} action="">
                <input type="text" name="name" id="name" placeholder='Name' required/>
