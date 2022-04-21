@@ -3,10 +3,12 @@ import { Toaster } from 'react-hot-toast';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './pages/About/About';
+import Addservice from './pages/Addservice/Addservice';
 import Checkout from './pages/Checkout/Checkout';
 import Home from './pages/Home/Home/Home';
 import ServiceDetails from './pages/Home/ServiceDetails/ServiceDetails';
 import Login from './pages/Login/Login';
+import Manage from './pages/manageServices/Manage';
 import Notfound from './pages/Notfound/Notfound';
 import Register from './pages/Register/Register';
 import Fotter from './pages/shared/Fotter/Fotter';
@@ -29,6 +31,16 @@ function App() {
         <Route path='/checkout' element={
           <RequireAuth>
             <Checkout></Checkout>
+          </RequireAuth>
+        }></Route>
+        <Route path='/addservice' element={
+          <RequireAuth>
+            <Addservice></Addservice>
+          </RequireAuth>
+        }></Route>
+        <Route path='/mannageservice' element={
+          <RequireAuth>
+            <Manage></Manage>
           </RequireAuth>
         }></Route>
         <Route path='*' element={<Notfound></Notfound>}></Route>
