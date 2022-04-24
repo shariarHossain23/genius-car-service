@@ -1,6 +1,6 @@
 import React from "react";
 import { useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import auth from "../../../firebase.init";
 import facebooklogo from '../../../images/logo/facebook.png';
@@ -11,8 +11,10 @@ const Sociallogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const navigate = useNavigate()
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     if(user || user1){
-        navigate("/home")
+      navigate(from, { replace: true });
     }
     let errorHandle;
     if(error || error1){

@@ -6,8 +6,8 @@ import ServiceData from '../../../CustomHook/ServiceData';
 const ServiceDetails = () => {
     const {serviceId} = useParams()
     const navigate = useNavigate()
-    const handleClick = () =>{
-        navigate('/checkout')
+    const handleClick = (serviceId) =>{
+        navigate(`/checkout/${serviceId}`)
     }
    const [services] = ServiceData(serviceId)
     return (
@@ -15,7 +15,7 @@ const ServiceDetails = () => {
            <h1>this is service details {services.name}</h1> 
            <h3></h3>
            <div className='mt-5 text-center'>
-            <Button onClick={()=> handleClick()} variant='danger'>Checkout</Button>
+            <Button onClick={()=> handleClick(serviceId)} variant='danger'>Checkout</Button>
            </div>
         </div>
     );
